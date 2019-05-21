@@ -3,10 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {TextInput, View,Image,Text} from "react-native";
 import {Button} from 'react-native-elements';
-
     
-
-const HomeComponent = props => {
+const FoodMapComponent = props => {
     const styles = {
         textInput: {
             height: 40,
@@ -71,7 +69,7 @@ const HomeComponent = props => {
     );
 }
 
-HomeComponent.propTypes = {
+FoodMapComponent.propTypes = {
     email: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
     handleEmailChange: PropTypes.func,
@@ -83,5 +81,5 @@ HomeComponent.propTypes = {
 
 
 
-export default HomeComponent;
+export default FoodMapComponent;
 

@@ -1,16 +1,16 @@
 import React from 'react';
-import HomeComponent from '../../Component/HomeComponent';
-import SideBar from '../../Component/SideBar'
+import FoodMapComponent from '../../Component/FoodMapComponent';
+import {FlatList,TouchableHighlight,View,Text} from 'react-native';
+// import SideBar from '../../Component/SideBar'
 
 
-class homeContainer extends React.Component {
+class foodMapContainer extends React.Component {
 
     static navigationOptions = {
-        // header: null
         headerStyle: {
             backgroundColor: 'red',
         },
-        headerLeft: null
+        // headerLeft: null
     };
     constructor(props) {
         super(props);
@@ -39,8 +39,21 @@ class homeContainer extends React.Component {
 
     render() {
         return (
+            <FlatList
                 
-                // <HomeComponent
+                data={[{title: 'Title Text', key: 'item1'}]}
+                renderItem={({item, separators}) => (
+                    <TouchableHighlight
+                    onPress={() => this._onPress(item)}
+                    onShowUnderlay={separators.highlight}
+                    onHideUnderlay={separators.unhighlight}>
+                    <View style={{backgroundColor: 'white'}}>
+                        <Text>{item.title}</Text>
+                    </View>
+                    </TouchableHighlight>
+                )}
+                />
+                // <FoodMapComponent
                 //         email={this.state.email}
                 //         password={this.state.password}
                 //         handleEmailChange={this.handleEmailChange}
@@ -49,10 +62,10 @@ class homeContainer extends React.Component {
                 //         handleSignup={this.handleSignup}
                 //         /* validationState={this.getValidationState} */
                 // />
-                <SideBar/>
+                // <SideBar/>
         );
     }
 }
 
 
-export default homeContainer;
+export default foodMapContainer;
