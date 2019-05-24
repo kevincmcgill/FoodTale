@@ -1,7 +1,7 @@
 import React from 'react';
 import FoodMapComponent from '../../Component/FoodMapComponent';
 import {FlatList,TouchableHighlight,View,Text} from 'react-native';
-// import SideBar from '../../Component/SideBar'
+import Block from '../../Component/Custom_component/Block'
 
 
 class foodMapContainer extends React.Component {
@@ -39,20 +39,20 @@ class foodMapContainer extends React.Component {
 
     render() {
         return (
-            <FlatList
+            // <FlatList
                 
-                data={[{title: 'Title Text', key: 'item1'}]}
-                renderItem={({item, separators}) => (
-                    <TouchableHighlight
-                    onPress={() => this._onPress(item)}
-                    onShowUnderlay={separators.highlight}
-                    onHideUnderlay={separators.unhighlight}>
-                    <View style={{backgroundColor: 'white'}}>
-                        <Text>{item.title}</Text>
-                    </View>
-                    </TouchableHighlight>
-                )}
-                />
+            //     data={[{title: 'Title Text', key: 'item1'}]}
+            //     renderItem={({item, separators}) => (
+            //         <TouchableHighlight
+            //         onPress={() => this._onPress(item)}
+            //         onShowUnderlay={separators.highlight}
+            //         onHideUnderlay={separators.unhighlight}>
+            //         <View style={{backgroundColor: 'white'}}>
+            //             <Text>{item.title}</Text>
+            //         </View>
+            //         </TouchableHighlight>
+            //     )}
+            //     />
                 // <FoodMapComponent
                 //         email={this.state.email}
                 //         password={this.state.password}
@@ -62,7 +62,7 @@ class foodMapContainer extends React.Component {
                 //         handleSignup={this.handleSignup}
                 //         /* validationState={this.getValidationState} */
                 // />
-                // <SideBar/>
+                <Block/>
         );
     }
 }

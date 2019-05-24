@@ -5,7 +5,7 @@ import {TextInput, View,Image, ImageBackground} from "react-native";
 import {Button} from 'react-native-elements';
 import loginBG from '../../resource/loginBG.jpg';
 import logo from '../../resource/logo.png';
-    
+
 
 const LoginComponent = props => {
 
